@@ -9,14 +9,29 @@ Each file is numbered to match the lesson and holds the full set of executable q
 
 ## 📂 Folder structure
 
+```text
 00-basics/
 └── SQL/
-├── lesson01.sql
-├── lesson02.sql
-├── ...
-├── lesson17.sql
-└── lesson18.sql
-
+    ├── Lesson01.sql
+    ├── Lesson02.sql
+    ├── Lesson03.sql
+    ├── Lesson04.sql
+    ├── Lesson05.sql
+    ├── Lesson06.sql
+    ├── Lesson07.sql
+    ├── Lesson08.sql
+    ├── Lesson09.sql
+    ├── Lesson10.sql
+    ├── Lesson11.sql
+    ├── Lesson12.sql
+    ├── Lesson13.sql
+    ├── Lesson14.sql
+    ├── Lesson15.sql
+    ├── Lesson16.sql
+    ├── Lesson17.sql
+    ├── Lesson18.sql
+    └── README.md
+```
 
 *Every file can be run stand-alone in any PostgreSQL-compatible environment.*
 
