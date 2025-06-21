@@ -1,4 +1,4 @@
--- Write your PostgreSQL query statement below
+-- Write your SQL query statement below
 SELECT COALESCE(e.employee_id, s.employee_id) AS employee_id
 FROM Employees e
 FULL OUTER JOIN Salaries s

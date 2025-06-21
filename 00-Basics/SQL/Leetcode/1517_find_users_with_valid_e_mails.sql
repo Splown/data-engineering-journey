@@ -1,4 +1,4 @@
--- Write your PostgreSQL query statement below
+-- Write your SQL query statement below
 SELECT
   user_id,
   name,

@@ -39,3 +39,4 @@
 # SQL Foundations  🚀
 
 This root folder tracks all structured-query learning in my **Data-Engineering-Journey**.
+```
