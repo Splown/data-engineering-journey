@@ -1,4 +1,4 @@
--- Write your PostgreSQL query statement below
+-- Write your SQL query statement below
 WITH ranked_salaries AS (
   SELECT
     e.id,

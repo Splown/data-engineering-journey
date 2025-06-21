@@ -1,4 +1,4 @@
--- Write your PostgreSQL query statement below
+-- Write your SQL query statement below
 WITH filtered AS (
   -- Behåll bara rader med ≥100 personer och numrera dem i stigande id-ordning
   SELECT

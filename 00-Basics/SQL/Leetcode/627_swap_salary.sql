@@ -1,4 +1,4 @@
--- Write your PostgreSQL query statement below
+-- Write your SQL query statement below
 update salary
 set sex = case
     when sex = 'm' then 'f'
