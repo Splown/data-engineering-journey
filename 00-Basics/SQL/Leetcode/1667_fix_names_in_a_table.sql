@@ -1,3 +1,3 @@
-select user_id, UPPER(LEFT(name,1)) || LOWER(SUBSTRING(name,2)) AS name
+select user_id, CONCAT(UPPER(LEFT(name,1)), LOWER(SUBSTRING(name,2))) AS name
 from users
-order by user_id 
+order by user_id;
