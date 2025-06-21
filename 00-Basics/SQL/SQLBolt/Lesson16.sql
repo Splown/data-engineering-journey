@@ -12,7 +12,7 @@ This table has no constraints.
 -- Solution:
 
 create table database (
-	name STRING PRIMARY KEY,
-	version FLOAT,
-	download_count INTEGER
-)
+        name TEXT,
+        version FLOAT,
+        download_count INTEGER
+);

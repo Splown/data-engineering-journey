@@ -26,8 +26,8 @@ Ensure that the default for this language is English.
 
 -- Solution 1:
 alter table movies
-add column aspect_ratio FLOAT
+add column aspect_ratio FLOAT;
 
 -- Solution 2:
 alter table movies
-add column language STRING default "English"
+add column language TEXT default 'English';
