@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Admin</h2>
+<form method="post"><button name="action" value="refresh_prices">Refresh prices now</button>
+<button name="action" value="refresh_news">Refresh news now</button>
+<button name="action" value="scan">Run scan now</button></form>
+<h3>Universe builder (CSV)</h3>
+<form method="post" action="/admin/import"><textarea name="csv_data" rows="8" cols="120" placeholder="ticker,name,country,exchange,stooq_symbol"></textarea><br><button>Import</button></form>
+<h3>Auto-discovery suggestioner (ej matchade nyheter)</h3>
+<ul>{% for s in suggestions %}<li>[{{s['source']}}] <a href="{{s['url']}}">{{s['title']}}</a></li>{% endfor %}</ul>
+<h3>Scan logs</h3>
+<ul>{% for l in logs %}<li>{{l['run_at']}} - universe {{l['universe_size']}}</li>{% endfor %}</ul>
+{% endblock %}

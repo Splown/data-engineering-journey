@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Settings</h2>
+<form method="post">
+<label>Tech-vikt <input name="weight_tech" value="{{settings.get('weight_tech','55')}}"></label>
+<label>News-vikt <input name="weight_news" value="{{settings.get('weight_news','35')}}"></label>
+<label>Risk-vikt <input name="weight_risk" value="{{settings.get('weight_risk','-10')}}"></label>
+<label>Tidsfönster dagar <input name="horizon_days" value="{{settings.get('horizon_days','5')}}"></label>
+<button>Spara</button></form>
+{% endblock %}
