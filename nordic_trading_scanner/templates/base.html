@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nordic Trading Scanner</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head><body>
+<header><h1>Nordic Trading Scanner (SE + NO)</h1>
+<nav><a href="/">Dashboard</a><a href="/settings">Settings</a><a href="/admin">Admin</a></nav></header>
+<section class="disclaimer">⚠️ Endast utbildnings- och experiment-syfte. Inte finansiell rådgivning. Data kan vara fel/fördröjd. Historik ≠ framtid.</section>
+{% with messages = get_flashed_messages() %}{% if messages %}<ul>{% for m in messages %}<li>{{m}}</li>{% endfor %}</ul>{% endif %}{% endwith %}
+{% block body %}{% endblock %}
+</body></html>

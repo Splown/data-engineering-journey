@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block body %}
+<h2>{{i['ticker']}} – {{i['name']}}</h2>
+<p>Why it ranks:</p><ul>{% for r in scores.reason %}<li>{{r}}</li>{% endfor %}</ul>
+<p>Tech {{scores.tech}} / News {{scores.news}} / Risk {{scores.risk}}</p>
+<h3>Pris (senaste 120 dagar)</h3>
+<table><tr><th>Datum</th><th>O</th><th>H</th><th>L</th><th>C</th><th>V</th></tr>{% for p in prices %}<tr><td>{{p['date']}}</td><td>{{p['open']}}</td><td>{{p['high']}}</td><td>{{p['low']}}</td><td>{{p['close']}}</td><td>{{p['volume']}}</td></tr>{% endfor %}</table>
+<h3>Nyheter</h3>
+<ul>{% for n in news %}<li>[{{n['source']}}] {{n['published_at']}} – <a href="{{n['url']}}">{{n['title']}}</a> ({{n['sentiment']}} / {{n['impact_score']}})</li>{% endfor %}</ul>
+{% endblock %}

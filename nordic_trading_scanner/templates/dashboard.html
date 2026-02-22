@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Top 20 kandidater</h2>
+<form method="get"><select name="country"><option value="ALL">Alla</option><option value="SE">SE</option><option value="NO">NO</option></select><button>Filter</button></form>
+<p>Universe-status:
+{% for u in universe %} {{u['country']}}={{u['c']}} (uppdaterad {{u['u']}}) {% endfor %}</p>
+<table><tr><th>Rank</th><th>Ticker</th><th>Bolag</th><th>Land</th><th>Close</th><th>Total</th><th>Tech</th><th>News</th><th>Risk</th><th>1v intervall</th><th>Signal</th></tr>
+{% for r in top %}
+<tr><td>{{loop.index}}</td><td><a href="/detail/{{r.id}}">{{r.ticker}}</a></td><td>{{r.name}}</td><td>{{r.country}}</td><td>{{r.close}} ({{r.last_date}})</td><td>{{r.total}}</td><td>{{r.tech}}</td><td>{{r.news}}</td><td>{{r.risk}}</td><td>{{r.range}}</td><td>{{r.strength}}</td></tr>
+<tr><td colspan="11"><ul>{% for reason in r.reason %}<li>{{reason}}</li>{% endfor %}</ul></td></tr>
+{% endfor %}
+</table>
+{% endblock %}
